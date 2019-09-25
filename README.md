@@ -1,27 +1,7 @@
-Welcome to Glitch
-=================
+Compile and run instructions: 
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+1. Clone the github repo into a folder
+2. Make sure you have NPM installed, you can test this with npm -v (this should return a version like 6.9)
+3. Install NPM to that folder using npm install
+4. npm start, this should return something like, Your app is listening on port 35353
+5. go to http://127.0.0.1:<portnumber>/
