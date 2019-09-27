@@ -26,10 +26,9 @@ p {
   flex: 1;
 }
 
-
-
 .toolbar {
   height: 60px;
+  margin: -10px;
   display: flex;
   align-items: center;
   background-color: #003c71;
