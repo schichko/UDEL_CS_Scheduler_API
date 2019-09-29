@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongo = require('mongoose');
-const port = 3000;
+const port = 8080;
 
 /*
     Connecting to the mongodb cluster, please dont hack me.
@@ -28,7 +28,8 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    //res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
 });
 
 var Schema = mongo.Schema;
@@ -61,7 +62,6 @@ app.get('/api/comments', function(req, res){
         }
 
         res.send(data);
-        console.log(data);
     });
 });
 
