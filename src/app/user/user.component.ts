@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
   }
 
   public async parseToken(data) {
-    let casToken;
+    let casToken: any;
     var parser = new xml2js.Parser({
       trim: true,
       explicitArray: false
