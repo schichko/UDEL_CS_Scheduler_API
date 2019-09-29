@@ -65,4 +65,4 @@ app.get('/api/comments', function(req, res){
     });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Express listening on port ${port}!`))
