@@ -51,10 +51,7 @@ var angryComment = new Comment(
     movie_id: null,
     text: 'this movie sucked, it wouldnt even load!'
     });
-
-app.get('/', (req, res) => res.send('Hello World!'))
-
-
+    
 app.get('/api/comments', function(req, res){
     Comment.find({"name":"test"}, function(err, data){
         if(err){
