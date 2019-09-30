@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4 {
+  color: #333;
+}
+
+#user_container {
+  background-image: url("https://www.udel.edu/content/dam/udelImages/main/graphics/layout/panel-images/yellow-abstract-panel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 5px 40px 5px 40px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+}

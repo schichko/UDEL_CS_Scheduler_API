@@ -1,0 +1,34 @@
+<cas:serviceResponse xmlns:cas='https://www.udel.edu/tp/cas'>
+          <cas:authenticationSuccess>
+          <cas:user>wwalker</cas:user>
+          <cas:persontype>STUDENT</cas:persontype>
+          <cas:firstname>William</cas:firstname>
+          <cas:middlename>Michael</cas:middlename>
+          <cas:lastname>Walker</cas:lastname>
+          <cas:fullname>William Michael Walker</cas:fullname>
+          <cas:email>wwalker@udel.edu</cas:email>
+          <cas:studentstreet1>78 Sunrise Drive</cas:studentstreet1>
+          <cas:studentstreet2></cas:studentstreet2>
+          <cas:studentstate>DE</cas:studentstate>
+          <cas:studentcity>Clayton</cas:studentcity>
+          <cas:studentzip>19938</cas:studentzip>
+          <cas:studentcountry>USA</cas:studentcountry>
+          <cas:studentphone>(302) 535-4637</cas:studentphone>
+          <cas:college>College of Engineering</cas:college>
+          <cas:degree>Bachelor of Arts</cas:degree>
+          <cas:major>Computer Science</cas:major>
+          <cas:minor>Aerospace Studies</cas:minor>
+          <cas:studentclassification>Senior</cas:studentclassification>
+          <cas:staffaddress></cas:staffaddress>
+          <cas:staffphone></cas:staffphone>
+          <cas:campusdeptcode></cas:campusdeptcode>
+          <cas:campusdeptname></cas:campusdeptname>
+          <cas:campusbldcode></cas:campusbldcode>
+          <cas:campusbldname></cas:campusbldname>
+          <cas:perclass></cas:perclass>
+          <cas:studenliob></cas:studenliob>
+          <cas:gender>Male</cas:gender>
+          <cas:studentftpt></cas:studentftpt>
+          <cas:emplid></cas:emplid>
+          </cas:authenticationSuccess>
+</cas:serviceResponse>
