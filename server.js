@@ -53,7 +53,7 @@ var angryComment = new Comment(
     });
     
 app.get('/api/comments', function(req, res){
-    Comment.find({"name":"test"}, function(err, data){
+    Comment.find({"email":req.query.userEmail}, function(err, data){
         if(err){
             res.send(err);
         }
@@ -62,4 +62,4 @@ app.get('/api/comments', function(req, res){
     });
 });
 
-app.listen(port, () => console.log(`Express listening on port ${port}!`))
+app.listen(port, () => console.log(`Backend listening on port ${port}!`))
