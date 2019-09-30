@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsComponent implements OnInit {
 
-  title = 'Fall 2019';
-
   constructor() { }
 
   ngOnInit() {
