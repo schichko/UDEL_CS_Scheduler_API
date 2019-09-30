@@ -52,8 +52,8 @@ var angryComment = new Comment(
     text: 'this movie sucked, it wouldnt even load!'
     });
     
-app.get('/api/comments', function(req, res){
-    Comment.find({"email":req.query.userEmail}, function(err, data){
+app.get('/api/comments/:userEmail', function(req, res){
+    Comment.find({"email":req.params.userEmail}, function(err, data){
         if(err){
             res.send(err);
         }
