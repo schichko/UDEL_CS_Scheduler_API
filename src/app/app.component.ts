@@ -16,8 +16,7 @@ export class AppComponent {
   }
 
   getComments(userEmail: string){
-    let params = new HttpParams().set("userEmail", userEmail);
-    return this.http.get('http://localhost:8080/api/comments', {params: params}).subscribe(data => this.comments = data);
+    return this.http.get(`http://localhost:8080/api/comments/${userEmail}`).subscribe(data => this.comments = data);
   }
 
   ngOnInit(){
