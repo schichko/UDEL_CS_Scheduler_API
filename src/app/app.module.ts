@@ -14,16 +14,13 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     TermsComponent,
-    UserComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
+    UserComponent,
     AboutComponent,
     PrivacyComponent,
     HomeComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule
