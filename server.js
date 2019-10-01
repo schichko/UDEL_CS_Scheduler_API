@@ -7,7 +7,7 @@ const port = 8080;
 /*
     Connecting to the mongodb cluster, please dont hack me.
 */
-var db = mongo.connect("mongodb+srv://muhammet:test123@cluster0-dg6n3.mongodb.net/sample_mflix?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, function(error, response){
+var db = mongo.connect("mongodb+srv://muhammet:test123@cluster0-dg6n3.mongodb.net/Degree_Plans?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, function(error, response){
     if(error){
         console.log(error);
     }
@@ -34,31 +34,63 @@ app.use(function(req, res, next) {
 
 var Schema = mongo.Schema;
 
-var commentsSchema = new Schema({
+var plansSchema = new Schema({
     objectId: mongo.Schema.Types.ObjectId,
-    name:  String,
-    email: String,
-    movie_id: mongo.Schema.Types.ObjectId,
-    text: String,
-    date: { type: Date, default: Date.now }
+    planID:  Number,
+    semester_1: Array,
+    semester_2: Array
   });
 
-var Comment = mongo.model('comments', commentsSchema, 'comments');
+var Plan = mongo.model('plans', plansSchema, 'plans');
 
-var angryComment = new Comment(
-    {name: 'test user', 
-    email: 'test@amazon.com',
-    movie_id: null,
-    text: 'this movie sucked, it wouldnt even load!'
-    });
-    
-app.get('/api/comments/:userEmail', function(req, res){
-    Comment.find({"email":req.params.userEmail}, function(err, data){
+app.post('/api/update-plan/:planID', function(req, res){
+    Plan.save({"planID":req.params.planID}, function(err, data){
         if(err){
             res.send(err);
         }
 
+        res.send({data: "The plan was deleted"});
+    });
+});
+
+app.get('/api/plans/:planID', function(req, res){
+    Plan.find({"planID":req.params.planID}, function(err, data){
+        if(err){
+            res.send(err);
+        }
+
+        console.log(data);
         res.send(data);
+    });
+});
+
+app.get('/api/plans/:planID/semester/1', function(req, res){
+    Plan.find({"planID":req.params.planID}, function(err, data){
+        if(err){
+            res.send(err);
+        }
+
+        res.send(data[0].semester_1);
+    });
+});
+
+app.get('/api/plans/:planID/semester/2', function(req, res){
+    Plan.find({"planID":req.params.planID}, function(err, data){
+        if(err){
+            res.send(err);
+        }
+
+        res.send(data[0].semester_2);
+    });
+});
+
+app.delete('/api/delete-plan/:planID', function(req, res){
+    Plan.deleteOne({"planID":req.params.planID}, function(err, data){
+        if(err){
+            res.send(err);
+        }
+
+        res.send({data: "The plan was deleted"});
     });
 });
 

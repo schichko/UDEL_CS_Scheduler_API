@@ -10,16 +10,17 @@ import { Observable } from 'rxjs';
 
 export class AppComponent {
   title = 'Computer Science Degree Planner';
-  comments;
+  currentPlan: any = [];
+  planID;
   constructor(private http : HttpClient){
 
   }
 
-  getComments(userEmail: string){
-    return this.http.get(`http://localhost:8080/api/comments/${userEmail}`).subscribe(data => this.comments = data);
+  getPlan(planID: number){
+    return this.http.get(`http://localhost:8080/api/plans/${planID}`).subscribe(plan => this.currentPlan = plan);
   }
 
   ngOnInit(){
-    this.getComments("test@amazon.com");
+    this.getPlan(1);
   }
 }

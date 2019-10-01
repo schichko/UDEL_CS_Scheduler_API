@@ -7,20 +7,14 @@
      </tr>
    </thead>
    <tbody>
-     <tr>
-       <th scope="row">1</th>
-       <td>Introduction to Computer Science I</td>
-       <td>3</td>
-     </tr>
-     <tr>
-       <th scope="row">2</th>
-       <td>Introduction to Computer Science II</td>
-       <td>3</td>
-     </tr>
-     <tr>
-       <th scope="row">3</th>
-       <td>Data Structures</td>
-       <td>3</td>
+     <tr *ngFor="let class of classes;let classNum = index">
+        <th scope="row">{{classNum+1}}</th>
+        <td>
+         {{ class.class }}
+        </td>
+        <td>
+          {{ class.credits }}
+        </td>
      </tr>
    </tbody>
  </table>
