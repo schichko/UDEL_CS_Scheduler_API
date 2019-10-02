@@ -6,18 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TermsComponent } from './terms/terms.component';
 import { UserComponent } from './user/user.component';
-import { AboutComponent } from './about/about.component';
-import { PrivacyComponent } from './privacy/privacy.component';
 import { HomeComponent } from './home/home.component';
+import { PlanComponent } from './plan/plan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TermsComponent,
     UserComponent,
-    AboutComponent,
-    PrivacyComponent,
-    HomeComponent
+    HomeComponent,
+    PlanComponent
   ],
   imports: [
     HttpClientModule,
