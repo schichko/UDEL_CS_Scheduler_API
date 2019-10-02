@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TermsComponent } from './terms/terms.component';
-import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
+import { PlanComponent } from './plan/plan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TermsComponent
+    TermsComponent,
+    UserComponent,
+    HomeComponent,
+    PlanComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

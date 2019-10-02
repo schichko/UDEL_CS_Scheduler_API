@@ -23,4 +23,9 @@ export class AppComponent {
   ngOnInit(){
     this.getPlan(1);
   }
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 }
