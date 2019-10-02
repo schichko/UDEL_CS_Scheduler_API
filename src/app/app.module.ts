@@ -8,6 +8,7 @@ import { TermsComponent } from './terms/terms.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { PlanComponent } from './plan/plan.component';
+import { ConcentrationDropdownComponent } from './concentration-dropdown/concentration-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PlanComponent } from './plan/plan.component';
     TermsComponent,
     UserComponent,
     HomeComponent,
-    PlanComponent
+    PlanComponent,
+    ConcentrationDropdownComponent
   ],
   imports: [
     HttpClientModule,
