@@ -4,8 +4,9 @@
   background-color: #fafafa;
   height: 100%;
   width: 100%;
-  margin: 20px;
+  margin: 0px;
   padding: 5px;
+  float :left;
   display: flex;
   flex-direction: row;
   justify-content: center;
