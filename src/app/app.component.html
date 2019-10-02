@@ -15,21 +15,19 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="" routerLinkActive="active">Default Plan <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="" routerLinkActive="active">Default Plan <span
+            class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="plan" routerLinkActive="active">Plan 1 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="plan" routerLinkActive="active">Plan 1 <span
+            class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
 </nav>
 
-
-<div class="content" role="main">
-  <app-user class="card-container"></app-user>
-</div>
-
 <div class="content" role="main">
   <h1>{{ title }}</h1>
-  <router-outlet class = "card-container"></router-outlet>
+  <app-user class="card-container"></app-user>
+  <router-outlet class="card-container"></router-outlet>
 </div>
