@@ -55,6 +55,11 @@ div#udHeader-collegeBar {
   max-width: 1024px;
 }
 
+.navWrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 /* UD Banner */
 header#udHeader {
   position: relative;

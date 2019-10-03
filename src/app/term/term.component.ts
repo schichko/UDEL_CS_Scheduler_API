@@ -3,17 +3,17 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-terms',
-  templateUrl: './terms.component.html',
-  styleUrls: ['./terms.component.css']
+  selector: 'app-term',
+  templateUrl: './term.component.html',
+  styleUrls: ['./term.component.css']
 })
-export class TermsComponent implements OnInit {
+export class TermComponent implements OnInit {
 
   title = 'Fall 2019';
 
   @Input()
   semester: number;
-  
+
   @Input()
   plan: number;
 
@@ -21,7 +21,7 @@ export class TermsComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  getSemesterPlan(planID: number){
+  getSemesterPlan(planID: number) {
     return this.http.get(`http://localhost:8080/api/plans/${planID}/semester/${this.semester}`).subscribe(plan => this.classes = plan);
   }
 
