@@ -5,6 +5,7 @@
         <th scope="col">{{title}}</th>
         <th scope="col">Class Description</th>
         <th scope="col">Credits</th>
+        <th scope="col" ><button onclick="appear()" id=add>edit</button></th>
       </tr>
     </thead>
     <tbody>
@@ -12,17 +13,37 @@
         <th scope="row">1</th>
         <td>Introduction to Computer Science I</td>
         <td>3</td>
+        <td><button class="hidden" id = minus></button></td>
       </tr>
       <tr>
         <th scope="row">2</th>
         <td>Introduction to Computer Science II</td>
         <td>3</td>
+        <td><button class="hidden" id = minus></button></td>
       </tr>
       <tr>
         <th scope="row">3</th>
         <td>Data Structures</td>
         <td>3</td>
+        <td><button class="hidden" id = minus></button></td>
+      </tr>
+      <tr>
+          <th scope="row"></th>
+          <td><button class="hidden" id = "add"><i class="addicon"></i>New Course</button></td>
+          <td></td>
+          <td></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<script language='javascript' type='text/javascript'>
+  function appear() {
+    var x = document.getElementsByClassName("hidden");
+    if (x.style.display == "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
