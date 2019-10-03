@@ -1,34 +1,9 @@
-<div class="toolbar" role="banner">
-  <img width="40" alt="UD Logo"
-    src="https://sites.udel.edu/wp-content/plugins/udtheme-brand/public/img/logos/img-ud-circle-logo.svg" />
-  <span>planner.cis.udel.edu</span>
-</div>
+<app-header></app-header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="">Your Plans</a>
-  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse"
-    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="" routerLinkActive="active">Default Plan <span
-            class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="plan" routerLinkActive="active">Plan 1 <span
-            class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="content" role="main">
-  <h1>{{ title }}</h1>
-  <app-user class="card-container"></app-user>
+<div class="content">
+  <app-user></app-user>
   <app-concentration-dropdown></app-concentration-dropdown>
-  <router-outlet class="card-container"></router-outlet>
+  <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>

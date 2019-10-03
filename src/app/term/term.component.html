@@ -1,5 +1,5 @@
  <table class="table">
-   <thead>
+   <thead class="thead-dark">
      <tr>
        <th scope="col">{{title}}</th>
        <th scope="col">Class Description</th>
@@ -8,13 +8,13 @@
    </thead>
    <tbody>
      <tr *ngFor="let class of classes;let classNum = index">
-        <th scope="row">{{classNum+1}}</th>
-        <td>
+       <th scope="row">{{classNum+1}}</th>
+       <td>
          {{ class.class }}
-        </td>
-        <td>
-          {{ class.credits }}
-        </td>
+       </td>
+       <td class="creditCount">
+         {{ class.credits }}
+       </td>
      </tr>
    </tbody>
  </table>
