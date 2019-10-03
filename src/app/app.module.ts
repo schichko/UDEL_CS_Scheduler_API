@@ -9,6 +9,8 @@ import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { PlanComponent } from './plan/plan.component';
 import { ConcentrationDropdownComponent } from './concentration-dropdown/concentration-dropdown.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ConcentrationDropdownComponent } from './concentration-dropdown/concent
     UserComponent,
     HomeComponent,
     PlanComponent,
-    ConcentrationDropdownComponent
+    ConcentrationDropdownComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,

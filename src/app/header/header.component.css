@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+@-webkit-viewport {
+  width: device-width
+}
+
+@-moz-viewport {
+  width: device-width
+}
+
+@-ms-viewport {
+  width: device-width
+}
+
+@-o-viewport {
+  width: device-width
+}
+
+@viewport {
+  width: device-width
+}
+
+@font-face {
+  font-family: 'greycliff-bold';
+  src: url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/GreycliffCF-Bold.woff2') format('woff2'),
+    url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/GreycliffCF-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'greycliff-light';
+  src: url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/GreycliffCF-Light.woff2') format('woff2'),
+    url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/GreycliffCF-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'vanguard-regular';
+  src: url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/vanguard-cf-regular.woff2') format('woff2'),
+    url('//www.udel.edu/content/dam/udelImages/digital-brand-assets/fonts/vanguard-cf-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+/* This header max-width may be altered to match the width of your site content/container */
+header#udHeader #udHeaderContainer,
+div#udHeader-collegeBar {
+  max-width: 1024px;
+}
+
+/* UD Banner */
+header#udHeader {
+  position: relative;
+  width: 100%;
+  background-color: #00539f;
+  border-bottom: 2px solid #ffd300;
+  float: left;
+}
+
+header#udHeader #udHeaderContainer {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+header#udHeader #udHeaderWrapper {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+header#udHeader #udHeaderLogo img {
+  height: 70px;
+  float: left;
+  margin: 20px;
+}
+
+/* College Banner */
+div#udHeader-collegeOuterWrapper {
+  width: 100%;
+  background: #003c71;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+div#udHeader-collegeBar {
+  width: 100%;
+  margin: auto;
+  padding: 15px 25px;
+  font-size: 18px;
+  box-sizing: border-box;
+  background: #003c71;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  line-height: normal;
+}
+
+div#udNavWrapper {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+div#udNavBar {
+  width: 100%;
+  margin: auto;
+  padding: 15px 25px;
+  font-size: 18px;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  line-height: normal;
+}
+
+div#udHeader-collegeBar #udHeader-collegeWrapper a {
+  font-family: 'greycliff-bold';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFF;
+  text-decoration: none;
+  line-height: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+div#udHeader-collegeBar #udHeader-collegeWrapper a:hover {
+  text-decoration: none;
+}
+
+/* Search Menu */
+header#udHeader .udHeaderMenu ul {
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+header#udHeader .udHeaderMenu li {
+  float: left;
+  padding-left: 15px;
+  list-style: none;
+}
+
+header#udHeader .udHeaderMenu li.udHeaderSearch {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+header#udHeader .udHeaderMenu a img {
+  height: 25px;
+  margin-top: 10px;
+}
+
+header#udHeader .udHeaderMenuTrigger a img {
+  height: 25px;
+}
+
+header#udHeader .udHeaderMenu {
+  font-family: 'open sans';
+  text-align: center;
+  z-index: 2;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header#udHeader .udHeaderMenu #udHeaderSearch {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  background: #eee;
+  padding: 5px 5px 1px 5px;
+  width: 340px;
+}
+
+header#udHeader #udHeaderSearchTrigger {
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+header#udHeader #udHeaderSearchTrigger.udHeaderOn {
+  background: #003c71;
+}
+
+header#udHeader .udHeaderMenu.show,
+.udHeaderSearch.show {
+  display: block;
+}
+
+header#udHeader .udHeaderSearch.hide {
+  display: none;
+}
+
+header#udHeader ul.udHeader-icon-list,
+header#udHeader ul.udHeader-icon-list li {
+  margin: 0;
+}
+
+/* Hide Mobile Elements in Desktop */
+header#udHeader #udHeaderMenuTrigger {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* UD Banner */
+  body header#udHeader #udHeaderMenuTrigger {
+    display: inline-block;
+  }
+
+  body header#udHeader #udHeaderLogo img {
+    height: 40px;
+    margin: 15px;
+  }
+
+  body header#udHeader .udHeaderMenuTrigger {
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    width: 25px;
+    cursor: pointer;
+  }
+
+  body header#udHeader .udHeaderMenuTrigger span {
+    height: 5px;
+    width: 5px;
+    margin: auto;
+    background-color: #FFF;
+    border-radius: 50%;
+    display: block;
+    clear: left;
+  }
+
+  body header#udHeader .udHeaderMenuTrigger span+span {
+    margin-top: 5px;
+  }
+
+  body header#udHeader .udHeaderMenuTrigger.udHeaderOn span {
+    background: #fed600;
+  }
+
+  body header#udHeader .udHeaderMenu {
+    text-align: center;
+    background: #003c71;
+    margin: 0;
+    display: none;
+    position: relative;
+  }
+
+  /* Search Menu (show search) */
+  body header#udHeader .udHeaderMenu a {
+    color: #00539f;
+    display: block;
+    padding: 10px;
+  }
+
+  body header#udHeader .udHeaderMenu ul {
+    margin-right: 15px;
+    margin: 0;
+    padding: 0px 15px;
+  }
+
+  body header#udHeader .udHeaderMenu li {
+    float: none;
+  }
+
+  body header#udHeader .udHeaderMenu li+li {
+    border-top: 1px solid #00315c;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  /* Search Menu (search bar) */
+  body header#udHeader #udHeaderSearchTrigger {
+    height: 20px;
+    padding-bottom: 0;
+  }
+
+  body header#udHeader #udHeaderSearchTrigger.udHeaderOn {
+    background: transparent;
+  }
+
+  body header#udHeader #udHeaderSearchTrigger.udHeaderOn a {
+    padding-bottom: 0;
+  }
+
+  body header#udHeader #udHeaderSearch {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  body header#udHeader #udHeaderSearch.show {
+    border-top: 0;
+    padding-bottom: 1px;
+  }
+
+  body header#udHeader #udHeaderSearchTrigger img {
+    margin-left: 15px;
+    height: 20px;
+  }
+
+  body header#udHeader #udHeaderSearch {
+    padding-bottom: 15px !important;
+    background: none;
+    right: inherit;
+  }
+
+  body header#udHeader .udHeaderMenu #udHeaderSearch {
+    position: relative;
+    top: 0;
+    right: 0;
+    background: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* College Banner */
+  body div#udHeader-collegeBar #udHeader-collegeMenuTrigger {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    width: 32px;
+    margin-top: -5px;
+  }
+
+  body div#udHeader-collegeBar #udHeader-collegeBar {
+    font-size: 16px;
+  }
+
+  /* Hide desktop search elemetns in mobile regardless of desktop state */
+  body header#udHeader #udHeaderSearchTrigger a {
+    display: none !important;
+  }
+}
