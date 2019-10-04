@@ -8,7 +8,7 @@ import { PlanComponent } from './plan/plan.component'
 const routes: Routes = [
   { path: 'term', component: TermComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'plan', component: PlanComponent },
+  { path: 'plan/:planID', component: PlanComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

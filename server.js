@@ -64,26 +64,6 @@ app.get('/api/plans/:planID', function(req, res){
     });
 });
 
-app.get('/api/plans/:planID/semester/1', function(req, res){
-    Plan.find({"planID":req.params.planID}, function(err, data){
-        if(err){
-            res.send(err);
-        }
-
-        res.send(data[0].semester_1);
-    });
-});
-
-app.get('/api/plans/:planID/semester/2', function(req, res){
-    Plan.find({"planID":req.params.planID}, function(err, data){
-        if(err){
-            res.send(err);
-        }
-
-        res.send(data[0].semester_2);
-    });
-});
-
 app.delete('/api/delete-plan/:planID', function(req, res){
     Plan.deleteOne({"planID":req.params.planID}, function(err, data){
         if(err){

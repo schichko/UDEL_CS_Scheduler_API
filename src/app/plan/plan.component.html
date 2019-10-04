@@ -1,4 +1,4 @@
 <div class="card-container">
-  <app-term semester=1 plan=1 class="card"></app-term>
-  <app-term semester=2 plan=1 class="card"></app-term>
+  <app-term [classes]="semesterPlan[0].semester_1" class="card"></app-term>
+  <app-term [classes]="semesterPlan[0].semester_2" class="card"></app-term>
 </div>
