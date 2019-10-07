@@ -14,8 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthCasModModule } from 'auth-cas-mod';
 import { environment } from '../environments/environment';
 
-AuthCasModModule.forRoot(environment);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +30,8 @@ AuthCasModModule.forRoot(environment);
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AuthCasModModule
+    AuthCasModModule,
+    AuthCasModModule.forRoot(environment)
   ],
   providers: [],
   bootstrap: [AppComponent]
