@@ -9,6 +9,10 @@ import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { PlanComponent } from './plan/plan.component';
 import { ConcentrationDropdownComponent } from './concentration-dropdown/concentration-dropdown.component';
+import { AuthCasModModule } from 'auth-cas-mod';
+import { environment } from '../environments/environment';
+
+AuthCasModModule.forRoot(environment);
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { ConcentrationDropdownComponent } from './concentration-dropdown/concent
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AuthCasModModule
   ],
   providers: [],
   bootstrap: [AppComponent]
